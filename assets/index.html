@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+    <meta charset=utf-8>
+    <title>jq-web web test</title>
+    <script src="jq.wasm.js"></script>
+    <script>
+
+async function convertJson(jsonString,expression)
+{
+
+
+    window.flutter_inappwebview
+                      .callHandler('showResult',JSON.stringify(await jq.promised.json(JSON.parse(jsonString), expression), null, 2));
+}
+</script>
+</head>
+<body>
+</body>
+</html>
